@@ -1,0 +1,12 @@
+include ':steganography'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  'flutter_module/.android/include_flutter.groovy'
+))
+include ':app'
+rootProject.name = "My Application"
+
+include ':flutter_module'
+
+include ':flutter_module'
