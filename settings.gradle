@@ -8,5 +8,3 @@ include ':app'
 rootProject.name = "My Application"
 
 include ':flutter_module'
-
-include ':flutter_module'
