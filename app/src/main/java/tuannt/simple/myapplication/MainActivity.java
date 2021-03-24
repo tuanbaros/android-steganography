@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 //            startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE_DECODE);
             showDialog("Decoding");
             DecodeRequest decodeRequest = new DecodeRequest(newImage, "tuan");
-            Stegy.decodeStringFromImage(MainActivity.this, decodeRequest, new StegyCallback<String>() {
+            Stegy.decode(MainActivity.this, decodeRequest, new StegyCallback<String>() {
                 @Override
                 public void onSuccess(String data) {
                     textMessage.setText(data);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                 showDialog("Encoding");
                 EncodeRequest encodeRequest = new EncodeRequest(originImage, "street", "tuan");
-                Stegy.encodeStringIntoImage(MainActivity.this, encodeRequest, new StegyCallback<Bitmap>() {
+                Stegy.encode(MainActivity.this, encodeRequest, new StegyCallback<Bitmap>() {
                     @Override
                     public void onSuccess(Bitmap data) {
 //                        saveToInternalStorage(data);

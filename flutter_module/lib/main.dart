@@ -18,11 +18,16 @@ void main() {
     } else if (call.method == "decode") {
       Map map = call.arguments;
       decode(map["data"], map["key"]);
+    } else if (call.method == "test") {
+      Map map = call.arguments;
+      Uint8List data = test(map["data"], map["width"], map["height"]);
+      platform.invokeMethod("success", data);
     }
   });
 }
 
 void encode(Uint8List data, String message, String key) async {
+  print(data[0]);
   try {
     EncodeRequest request = EncodeRequest(data, message, key: key);
     Uint8List response = await encodeMessageIntoImageAsync(request);

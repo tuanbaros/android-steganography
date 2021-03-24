@@ -107,9 +107,9 @@ packages:
   flutter_steganography:
     dependency: "direct main"
     description:
-      name: flutter_steganography
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../../flutter_steganography"
+      relative: true
+    source: path
     version: "0.0.2"
   flutter_test:
     dependency: "direct dev"
